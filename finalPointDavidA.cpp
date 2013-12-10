@@ -80,13 +80,13 @@ FinalFractionDavidA FinalPointDavidA::getY() const {
 	return *y;
 }
 
-	void FinalPointDavidA::setX(FinalFractionDavidA& old) {
+	void FinalPointDavidA::setX(const FinalFractionDavidA& old) {
 		*x = old;
 
 		return;
 	}
 
-	void FinalPointDavidA::setY(FinalFractionDavidA& old) {
+	void FinalPointDavidA::setY(const FinalFractionDavidA& old) {
 		*y = old;
 
 		return;
