@@ -21,15 +21,18 @@ FinalBoxDavidA::~FinalBoxDavidA(void) {
 	delete height;
 	}
 
-FinalBoxDavidA::FinalBoxDavidA(FinalPointDavidA& uR, FinalPointDavidA& lL, FinalFractionDavidA& h) : ShapeDavidA("Box"), FinalRectangleDavidA(uR, lL) {
+FinalBoxDavidA::FinalBoxDavidA(FinalPointDavidA& uR, FinalPointDavidA& lL, FinalFractionDavidA& h) 
+				: ShapeDavidA("Box"), FinalRectangleDavidA(uR, lL) {
 	height = new FinalFractionDavidA(h);
 	}
 
-FinalBoxDavidA::FinalBoxDavidA(FinalPointDavidA& uR, FinalPointDavidA& lL, int h) : ShapeDavidA("Box"), FinalRectangleDavidA(uR, lL) {
+FinalBoxDavidA::FinalBoxDavidA(FinalPointDavidA& uR, FinalPointDavidA& lL, int h) 
+				: ShapeDavidA("Box"), FinalRectangleDavidA(uR, lL) {
 	height = new FinalFractionDavidA(h);
 	}
 
-FinalBoxDavidA::FinalBoxDavidA(const FinalRectangleDavidA& rec, const FinalFractionDavidA& h) : ShapeDavidA("Box"), FinalRectangleDavidA(rec) {
+FinalBoxDavidA::FinalBoxDavidA(const FinalRectangleDavidA& rec, const FinalFractionDavidA& h) 
+				: ShapeDavidA("Box"), FinalRectangleDavidA(rec) {
 	height = new FinalFractionDavidA(h);
 }
 
@@ -47,7 +50,8 @@ FinalBoxDavidA& FinalBoxDavidA::operator=(const FinalBoxDavidA& old) {
 }
 
 FinalFractionDavidA FinalBoxDavidA::getArea() const {
-	return FinalFractionDavidA(((getLength() * getWidth()) + (getLength() * getHeight()) + (getWidth() * getHeight())) * 2);
+	return FinalFractionDavidA(((getLength() * getWidth()) + (getLength() * getHeight()) 
+					+ (getWidth() * getHeight())) * 2);
 }
 
 FinalFractionDavidA FinalBoxDavidA::getVolume() const {
