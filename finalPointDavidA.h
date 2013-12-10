@@ -26,8 +26,8 @@ public:
 	void flipThroughOrigin();
 	FinalFractionDavidA getX(void) const;
 	FinalFractionDavidA getY(void) const;
-	void setX(FinalFractionDavidA&);
-	void setY(FinalFractionDavidA&);
+	void setX(const FinalFractionDavidA&);
+	void setY(const FinalFractionDavidA&);
 	friend std::ostream& operator<<(std::ostream&, const FinalPointDavidA&);
 	friend std::istream& operator>>(std::istream&, FinalPointDavidA&);
 
